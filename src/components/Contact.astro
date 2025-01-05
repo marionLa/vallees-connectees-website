@@ -1,0 +1,21 @@
+---
+import {getCollection} from "astro:content";
+import Heading from "./Heading.astro";
+
+const contacts = await getCollection('contacts');
+---
+<Heading title="Vous cherchez à nous joindre ?" id="contact"></Heading>
+
+<div class="flex justify-center flex-wrap min-w-full min-h-full">
+
+    <div class="flex justify-center flew-wrap min-w-full">
+        <img src="/contact.png" height="205" alt="contact"/>
+    </div>
+    <div class="flex justify-center flew-wrap min-w-full text-xl font-extrabold mt-4">
+        {contacts.map((contact) => (
+                <p>{contact.data.atmail}</p>
+
+        ))}
+    </div>
+</div>
+

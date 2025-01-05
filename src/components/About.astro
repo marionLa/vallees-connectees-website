@@ -1,0 +1,17 @@
+---
+import {getCollection} from "astro:content";
+const about = await getCollection('about');
+
+import { Icon } from 'astro-icon/components'
+import Heading from "./Heading.astro";
+---
+
+<Heading title="Au fait, on est qui  ?" id="about"></Heading>
+
+<div class="w-full flex flex-wrap place-content-center px-4 py-4  min-h-screen">
+    {about.map((about) => (
+            <div class="text-center w-full">{about.data.description}</div>
+            <Icon class="my-5 h-10" name="twotone-hub"/>
+    ))}
+</div>
+

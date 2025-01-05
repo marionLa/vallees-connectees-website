@@ -1,0 +1,74 @@
+---
+import Social from "./Social.astro";
+---
+
+
+<nav class="border-gray-200  h-40 bg-blue ">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+            <img src="/logo.png" class="h-20 md:h-24 my-4.5" alt="Flowbite Logo"/>
+        </a>
+        <div class="hidden lg:block">
+            <div class="flex space-x-4">
+
+                <a href="/#news"
+                   class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Actus</a>
+
+                <a href="/#about" class=" text-slate-300   hover:text-white rounded-md px-3 py-2 text-lg font-medium"
+                   aria-current="page">Qui sommes-nous ?</a>
+                <a href="/#valeurs"
+                   class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nos
+                    valeurs</a>
+                <a href="/#services"
+                   class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nos
+                    actions</a>
+                <a href="/#contact"
+                   class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nous
+                    contacter</a>
+            </div>
+        </div>
+        <button data-collapse-toggle="navbar-hamburger" type="button"
+                class="lg:hidden inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-hamburger" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+
+        <div class="hidden w-full " id="navbar-hamburger">
+            <ul class="flex z-10 flex-col content-end w-[250px] font-medium mt-4 rounded-lg bg-blue text-right fixed top-22 right-0">
+                <li>
+                    <a href="/#news"
+                       class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Actus</a>
+                </li>
+                <li><a href="/#about"
+                       class=" text-slate-300   hover:text-white rounded-md px-3 py-2 text-lg font-medium"
+                       aria-current="page">Qui sommes-nous ?</a></li>
+                <li>
+                    <a href="/#valeurs"
+                       class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nos
+                        valeurs</a></li>
+                <li>
+                    <a href="/#services"
+                       class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nos
+                        actions</a>
+                </li>
+                <li>
+                    <a href="/#contact"
+                       class="text-slate-300  hover:text-white rounded-md px-3 py-2 text-lg font-medium">Nous
+                        contacter</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex content-end my-4">
+            <Social></Social>
+        </div>
+
+    </div>
+
+
+</nav>
+
+

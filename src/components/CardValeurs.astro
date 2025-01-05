@@ -1,0 +1,25 @@
+---
+import {Icon} from 'astro-icon/components'
+import type {Valeur} from "../models/valeurs";
+interface Props {
+    valeur:Valeur
+}
+
+const {valeur} = Astro.props;
+
+
+---
+
+
+<div class="max-w-sm rounded overflow-hidden shadow-lg min-w-full">
+    <div class="w-full flex justify-center text-center">
+        <Icon class="h-[100px] text-5xl" name={valeur.icon}/>
+    </div>
+    <div class="px-6 py-4 text-center">
+        <div class="font-bold text-xl mb-2">{valeur.title}</div>
+        <p class="text-gray-700 text-base">
+            {valeur.content}
+        </p>
+    </div>
+
+</div>

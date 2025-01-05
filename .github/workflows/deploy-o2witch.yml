@@ -1,0 +1,48 @@
+name: Deploy Astro to o2switch
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:18
+
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci || npm install --ignore-scripts
+
+      # erreur esbuild
+      - name: Rebuild esbuild
+        run: npm rebuild esbuild || true
+
+      - name: Build Astro project
+        run: npm run build --if-present
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+            server: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            password: ${{ secrets.PASSWORD }}
+            local-dir: ./dist/
+            server-dir: ${{ secrets.PATH }}
+
+      - name: Upload npm logs
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: npm-logs
+          path: /home/runner/.npm/_logs/

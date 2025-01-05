@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+
+    .titles {
+        @apply uppercase text-2xl font-extrabold my-4 text-center bg-blue;
+    }
+}
+
+

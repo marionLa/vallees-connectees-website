@@ -1,0 +1,18 @@
+{
+  "title": "Faire un don ou adhérer à l'association",
+  "image": "dons.png",
+  "content": "Pour adhérer à l'association ou nous faire un don, RDV sur HelloAsso ! ",
+  "date": "",
+  "links": [
+    {
+      "url": "https://www.helloasso.com/associations/vallees-connectees/adhesions/adhesions-2024",
+      "content": "Adhérer",
+      "description": "Adhérer à l'association pour l'année 2023."
+    },
+    {
+      "url": "https://www.helloasso.com/associations/vallees-connectees/formulaires/1",
+      "content": "Faire un don",
+        "description": "Faire un don à l'association."
+    }
+  ]
+}

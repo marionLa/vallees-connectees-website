@@ -1,0 +1,19 @@
+---
+import {getCollection} from "astro:content";
+import CardService from "./CardService.astro";
+import Heading from "./Heading.astro";
+
+const services = await getCollection("services")
+---
+
+<Heading title="Qu'est-ce qu'on propose ?" id="services"></Heading>
+
+
+<div class="flex flex-wrap min-w-full min-h-screen mt-8">
+
+    {
+        services.map((serv) => (
+                <CardService service={serv.data}/>
+        ))
+    }
+</div>

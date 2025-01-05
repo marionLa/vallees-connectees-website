@@ -1,0 +1,18 @@
+---
+import {getCollection} from "astro:content";
+import CardValeurs from "./CardValeurs.astro";
+import Heading from "./Heading.astro";
+const valeurs = await getCollection("valeurs")
+---
+
+<Heading title="Ce qui est important pour nous" id="valeurs"></Heading>
+
+
+<div class=" grid place-content-strech grid-cols-1   lg:grid-cols-3  gap-3 mb-12 min-h-screen auto-cols-min">
+
+    {
+        valeurs.map((valeur) => (
+                <CardValeurs valeur={valeur.data}></CardValeurs>
+        ))
+    }
+</div>

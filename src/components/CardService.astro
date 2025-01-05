@@ -1,0 +1,29 @@
+---
+import type {Services} from "../models/services";
+interface Props {
+    service:Services
+}
+
+const {service} = Astro.props;
+---
+
+
+<!-- component -->
+<div class="bg-white p-2 min-w-full max-w-3xl lg:w-full lg:p-4 h-auto lg:h-64 rounded-2xl shadow-lg flex flex-col lg:flex-row gap-5 select-none">
+    <div class="min-h-[215px] lg:h-full lg:w-72  "
+
+    ><img src={service.image} alt="images-service"/></div>
+    <div class="flex lg:flex-1 flex-col gap-2 p-1">
+        <h1 class="text-lg lg:text-xl font-semibold  text-gray-600">
+            {service.title}
+        </h1>
+        <p class="text-gray-500 text-lg lg:text-base line-clamp-3">
+            {service.content}
+        </p>
+        <div class="flex gap-4 mt-auto">
+
+
+        </div>
+    </div>
+</div>
+

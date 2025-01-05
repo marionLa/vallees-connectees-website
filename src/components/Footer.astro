@@ -1,0 +1,14 @@
+---
+import {getCollection} from "astro:content";
+const contactDetail = await getCollection('people');
+---
+
+<div class="bg-blue min-h-[200px] py-4 mt-4  flex flex-wrap justify-center gap-10 my-0 mx-auto">
+    {contactDetail.map(contact => (
+            <div>
+                <div class="uppercase text-2xl font-extrabold">{contact.data.group}</div>
+                <div> {contact.data.name}</div>
+                <div>{contact.data.phone}</div>
+            </div>))}
+
+</div>

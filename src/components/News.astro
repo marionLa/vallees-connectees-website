@@ -1,0 +1,14 @@
+---
+import {getCollection} from "astro:content";
+import Card from "./Card.astro";
+import Heading from "./Heading.astro";
+const news = await getCollection("news");
+---
+
+<Heading title="Quoi de neuf ?" id="news"></Heading>
+
+<div class="flex flex-wrap place-content-center gap-4  min-h-screen">
+    {news.map((item) => (
+            <Card news={item.data}></Card>
+    ))}
+</div>

@@ -1,0 +1,10 @@
+---
+const {id, title} = Astro.props
+const href = `#${id}`;
+---
+
+<div {id} class="titles">
+    <a {href}></a>
+    {title}
+</div>
+
