@@ -1,18 +1,13 @@
 {
-  "title": "Enquête sur les usages du numérique",
-  "image": "enquete.webp",
-  "content": "Si vous n'avez pas encore eu accès à l'enquête sur les usages du numérique, rendez-vous sur le lien ci-dessous. Les réponses nous serviront à adapter au mieux nos propositions de services. Merci à vous !",
+  "title": "Repair-café",
+  "image": "repair-cafe-fev25.webp",
+  "content": "Le Repair Café reprend du service en 2025 ! Organisé par Vallée de Munster en Transition, il aura lieu le 22 février à la salle communale de Luttenbach-près-Munster. Vallées Connectées sera présente avec son imprimante 3D, ses robots pédagogiques et ses outils pour réparer les ordis :)",
   "date": "",
   "links": [
     {
-      "url": "https://www.agora.vallees-connectees.alsace/surveys/index.php/554876?lang=fr",
-      "content": "Enquête",
-      "description": "Enquête sur les usages du numérique"
-    },
-    {
-      "url": "",
-      "content": "",
-      "description": ""
+      "url": "https://munstertransition.org/",
+      "content": "Plus d'infos sur le site de VMT",
+      "description": "Site web de Vallée de Munster en Transition."
     }
   ]
 }
